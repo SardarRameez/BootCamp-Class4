@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import './Room.css';
 
 
 function Room() {
@@ -9,10 +10,10 @@ function Room() {
     //     console.log("Button clicked")
     //     setLit(!isLit)
     // }
-    return ( 
-        <div>
-            This is Room Component. light is {isLit? "On": "Off"}
-            <button onClick={()=>setLit(!isLit)}>Light On/Off</button>
+    return (  
+        <div className={"room "+(isLit? "On":"Off")}>
+            {/* {isLit? "On": "Off"} */}
+            <button onClick={()=>setLit(!isLit)} className="btn">Light On/Off</button>
         </div>
   );
 }
